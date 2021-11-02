@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+
+    <title>Grupo de Pesquisa em Tecnologias para Saude - tech4health</title>
+    <meta charset="utf-8">
+    <meta http-equiv="content-language" content="pt-br">
+    <meta name="author" content="André del Mestre">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta name="rating" content="general">
+
+    <meta name="robots" content="index,follow"> 
+
+    <meta name="description" content="Grupo de Pesquisa em Tecnologias para Saude - tech4health.">
+
+    <meta name="keywords" content="IFSul, charqueadas, André del mestre, IoT, healthcare, programacao">
+
+    <meta name="url" content="http://tsi.charqueadas.ifsul.edu.br/~tech4health/" />
+
+
+    <!-- <meta property="fb:app_id" content="2639097959663892" /> -->
+    <meta property="og:title" content="Grupo de Pesquisa - tech4health"/>
+    <meta property="og:description" content="Grupo de Pesquisa em Tecnologias para Saude"/>
+    <meta property="og:image" content="http://tsi.charqueadas.ifsul.edu.br/~tech4health/logo/logo-quadrado.jpeg"/>
+    <meta property="og:url" content="http://tsi.charqueadas.ifsul.edu.br/~tech4health/"/>
+    <meta property="og:site_name" content="tech4health IFSul"/>
+    <meta property="og:type" content="website"/>
+
+
+
+    <meta name="twitter:card" content="tech4health IFSul" />
+    <meta name="twitter:site" content="@fisiokellin" />
+    <meta name="twitter:domain" content="http://tsi.charqueadas.ifsul.edu.br/~tech4health/" />
+    <meta name="twitter:title" content="Grupo de Pesquisa - tech4health" />
+    <meta name="twitter:description" content="Grupo de Pesquisa em Tecnologias para Saude" />
+    <meta name="twitter:image" content="http://tsi.charqueadas.ifsul.edu.br/~tech4health/logo/thumb.jpeg" />
+
+
+    <link rev="made" href="mailto:andremartins@ifsul.edu.br" />
+
+    <link rel="shortcut icon" href="http://tsi.charqueadas.ifsul.edu.br/~delmestre/img/icone.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="http://tsi.charqueadas.ifsul.edu.br/~delmestre/img/icone.ico" type="image/x-icon"/>
+ 
+  
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./css/timeline.css">
+
+    <link rel="canonical" href="http://tsi.charqueadas.ifsul.edu.br/~delmestre/">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" defer></script>
+ -->
+<!-- JS, Popper.js, and jQuery -->
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> -->
+
+
+
+
+    <!-- <link rel="stylesheet" type="text/css" href="./css/estilos.css"> -->
+
+
+ 
+<style type="text/css">
+ 
+a {
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+  @media (max-width: 768px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* display 3 */
+@media (min-width: 768px) {
+    
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(33.333%);
+    }
+    
+    .carousel-inner .carousel-item-left.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-33.333%);
+    }
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+}
+
+
+</style>
+
+</head>
+<body>
+ 
+<nav name="topo" class="navbar navbar-expand-lg fixed-top navbar-dark">
+  <div class="navbar-brand">
+    <a class="nav-item navbar-link" href="http://www.charqueadas.ifsul.edu.br/portal/" target="_blank">           
+    <img src="./logo/if-menu-branco.png" alt="logomarca IFSul branca" class="" style="width:200px;">
+    </a>
+  </div>
+  <button class="navbar-toggler" data-target="#myNavbar" data-toggle="collapse" type="button">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="navbar-nav">
+      <li>
+        <a class="nav-link" href="#projetos"><i aria-hidden="true" class="fa fa-lg fa-search"></i> Projetos</a> 
+      </li>
+      <li>
+        <a class="nav-link" href="#publicacoes"><i aria-hidden="true" class="fa fa-lg fa-file-text"></i> Publicacoes</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#professores"><i aria-hidden="true" class="fa fa-lg fa-mortar-board"></i> Professores</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#alunos"><i aria-hidden="true" class="fa fa-lg fa-users"></i>Alunos</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#recursos"> <i aria-hidden="true" class="fa fa-lg fa-share-alt"></i> Recursos</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#sobre"><i aria-hidden="true" class="fa fa-lg fa-hand-o-right"></i> Sobre</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- <header>
+  <br>
+    <div class="d-block message">
+      <img class="img-fluid" src="./logo/logo-composto.jpeg" alt="logomarca tech4health IFSul">
+    </div>        
+  <br>
+</header>
+ -->
+<header>
+  <img class="img-fluid mx-auto" src="./logo/logo-composto.jpeg" alt="logomarca tech4health IFSul">
+</header>
+
+
+<div class="container">
+
+
+<section class="mt-3">
+  <a name="projetos"></a><h2>Projetos</h2>
+  <div class="row">
+    <div class="col-12">
+	    <div class="card">
+	      <img src="./logo/overview.jpeg" loading="lazy" class="card-img-top" alt="Metodologia ODA multicamada">
+	      <div class="card-body">
+          <p class="card-text">
+            No exemplo da figura, na linha de pesquisa IoT in HealthCare, tem dois alunos da ECA desenvolvendo <span class="font-weight-bold">dispositivo físico</span> para aquisição de sinais de eletrocardiograma (ECG device). Também há um aluno do TSI no <span class="font-weight-bold">back-end</span> para identificação de cardiopatias e no <span class="font-weight-bold">front-end</span> para visualização do ECG. Há muitas outras frentes de trabalho somente neste projeto que necessitam de mais alunos.
+          </p>
+	        <p class="card-text">
+	          <span class="text-original-blue font-weight-bold">Aluno do TSI ou ECA:</span>
+	          <ul class="no-bullet">
+	            <li> <i aria-hidden="true" class="fa fa-check text-original-blue"></i> Desenvolva seu TCC ou sua Pesquisa conosco; </li>
+	            <li> <i aria-hidden="true" class="fa fa-check text-original-blue"></i> Temos varias sugestões de trabalhos; </li>
+	          </ul>
+	        </p>
+          <p class="card-text text-center">
+            <a class="btn btn-success mx-3" href="#" role="button">Alunos ECA</a>
+            <a class="btn btn-success mx-3" href="#" role="button">Alunos TSI</a>
+          </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <span class="badge badge-pill badge-warning"><i class="fa fa-hourglass-half"></i> Em Andamento</span> Sistema de Assistência Médica Remota Baseado em IoT para Monitoramento e Diagnóstico Automatizado de Cardiopatias
+        </li>
+        <li class="list-group-item text-muted">
+          <span class="badge badge-pill badge-primary"><i class="fa fa-check"></i> Finalizado</span> Internet das Coisas Aplicado ao Desenvolvimento de Sistemas para Diagnóstico Remoto de Cardiopatias
+        </li>
+      </ul>
+    </div>
+    </div>
+  </div>
+      
+</section>
+
+<!-- <hr> -->
+
+<section class="mt-3">
+  <a name="publicacoes"></a><h2>Publicações/Apresentações</h2>
+
+  <div class="row">
+
+           <div class="col-12"> 
+
+              <ul class="timeline">
+                <li>
+                  <h5 class="text-original-dark-blue">Sistema portátil de aquisição de sinais de ECG para diagnóstico local ou remoto de cardiopatias
+                  <span class="float-right badge badge-pill badge-success">Jun/2021</span></h5>
+                  <p class="card-text">
+                    <span class="text-muted font-weight-light">
+                      TCC - Trabalho de Conclusão de Curso
+                    </span><br>
+                    Autor: <strong>Wellington dos Santos Leote</strong><br>
+                    <span class="text-muted">Orientação: <strong>André del Mestre, Fábio Itturriet</strong></span>
+                  </p>
+                </li>
+                <li>
+                  <h5 class="text-original-dark-blue">Internet das Coisas Aplicado ao Desenvolvimento de Sistemas para Diagnóstico Remoto de Cardiopatias
+                  <span class="float-right badge badge-pill badge-success">Nov/2020</span></h5>
+                  <p class="card-text">
+                    <span class="text-muted font-weight-light">
+                      Apresentação na Semana Acadêmica da ECA
+                    </span><br>
+                    <strong>Patrick Anderson Lacerda Morás, Marcelo Da Silva Janke</strong>.
+                  </p>
+                </li>
+              </ul>
+           </div>
+   </div>   
+
+</section>
+
+<section class="mt-3">
+
+  <a name="professores"></a><h2>Professores</h2>
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4 text-center">
+            <img class="rounded-circle" src="./img/perfil.jpg" alt="Foto de rosto de André del Mestre" style="width:140px;">
+            <h3 class="text-original-dark-blue">André del Mestre</h3>
+            <p class="text-justify">Doutor em Ciência da Computação (PUCRS-2018). Professor de Programação. Iniciando pesquisas com gerenciamento de recursos para HealthCare e IoT para HealthCare.
+            </p>
+            <p>
+              <a class="btn btn-success" href="http://lattes.cnpq.br/8570090119222585" role="button">Lattes &raquo;</a> &nbsp;
+              <a class="btn btn-success" href="http://tsi.charqueadas.ifsul.edu.br/~delmestre/" role="button">Site &raquo;</a>
+            </p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4 text-center">
+            <img class="rounded-circle" src="./img/fabio.jpg" alt="Foto de rosto de Fábio Itturriet" style="width:140px;">
+            <h3 class="text-original-dark-blue">Fábio Itturriet</h3>
+            <p class="text-justify">Doutor em Engenharia Elétrica (UFSC-2019). Professor de Microcontroladores. ....</p>
+            <p>
+              <a class="btn btn-success" href="http://lattes.cnpq.br/5232832741928891" role="button">Lattes &raquo;</a>
+            </p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4 text-center">
+            <img class="rounded-circle" src="./img/juliano.jpeg" alt="Foto de rosto de Juliano Machado" style="width:140px;">
+            <h3 class="text-original-dark-blue">Juliano Machado</h3>
+            <p class="text-justify">Mestre em Engenharia Elétrica pela (UFRGS-2012). Professor de Eletrônica. Tem experiência na área de Engenharia Elétrica, com ênfase em Instrumentação Eletrônica, atuando principalmente nos seguintes temas: eletromiografia, brain computer interface (bci), inteligência computacional, eletrônica e robótica.</p>
+            <p>
+              <a class="btn btn-success" href="http://lattes.cnpq.br/8432315655154147" role="button">Lattes &raquo;</a>
+            </p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+ 
+</section>
+
+<section class="mt-3">
+
+  <a name="alunos"></a><h2>Alunos</h2>
+
+  <div class="row mx-auto my-auto">
+    <div class="col-md-4"> <!-- offset-md-3 -->
+        <div class="card card-body mb-3">
+          <h5 class="card-title"><img class="float-left mr-3 rounded-circle" src="./img/marcelo.jpg" alt="Foto de Marcelo Janke" style="width:60px;">
+ Marcelo da Silva Janke</h5>
+          <h6 class="card-subtitle mb-2 text-muted font-weight-light">Internet das Coisas Aplicado ao Desenvolvimento de Sistemas para Diagnóstico Remoto de Cardiopatias.</h6>
+          <p class="card-text">
+            <i aria-hidden="true" class="fa fa-search text-original-dark-blue"></i> Projeto de Pesquisa<br> 
+            <i aria-hidden="true" class="fa fa-check text-original-dark-blue"></i> Tecnologia em Sistemas para Internet<br>
+            <i aria-hidden="true" class="fa fa-calendar text-original-dark-blue"></i> Em andamento<br>
+          </p>
+          <small class="text-secondary obs text-center">
+            <a href="#" target="_blank"><i aria-hidden="true" class="fa fa-linkedin"></i></a> &nbsp;
+            <a href="#" target="_blank"><i aria-hidden="true" class="fa fa-github"></i></a> &nbsp;
+            <a href="#" target="_blank">Lattes</a>
+          </small>
+        </div>
+    </div> <!-- close col-md-4 -->
+    <div class="col-md-4"> <!-- offset-md-3 -->
+        <div class="card card-body mb-3">
+
+          <h5 class="card-title">
+            <img class="rounded-circle float-left mr-3" src="./img/patrick.jpg" alt="Foto de Patrick Morás" style="width:60px;">
+            Patrick Anderson Lacerda Morás</h5>
+          <h6 class="card-subtitle mb-2 text-muted font-weight-light">Sistema de Assistência Médica Remota Baseado em IoT para Monitoramento e Diagnóstico Automatizado de Cardiopatias.</h6>
+          <p class="card-text">
+            <i aria-hidden="true" class="fa fa-search text-original-dark-blue"></i> Projeto de Pesquisa<br> 
+            <i aria-hidden="true" class="fa fa-check text-original-dark-blue"></i> Engenharia de Controle e Automação<br>
+            <i aria-hidden="true" class="fa fa-calendar text-original-dark-blue"></i> Em andamento<br>
+          </p>
+          <small class="text-secondary obs text-center">
+            <a href="#" target="_blank"><i aria-hidden="true" class="fa fa-linkedin"></i></a> &nbsp;
+            <a href="#" target="_blank"><i aria-hidden="true" class="fa fa-github"></i></a> &nbsp;
+            <a href="#" target="_blank">Lattes</a>
+          </small>
+        </div>
+        <div class="card card-body mb-3">
+          <h5 class="card-title">
+            <img class="rounded-circle float-left mr-3" src="./img/job.jpg" alt="Foto de Job Coleraus" style="width:60px;">
+            Job dos Santos Coleraus
+          </h5>
+          <h6 class="card-subtitle mb-2 text-muted font-weight-light">Sistema de Assistência Médica Remota Baseado em IoT para Monitoramento e Diagnóstico Automatizado de Cardiopatias.</h6>
+          <p class="card-text">
+            <i aria-hidden="true" class="fa fa-search text-original-dark-blue"></i> Projeto de Pesquisa<br> 
+            <i aria-hidden="true" class="fa fa-check text-original-dark-blue"></i> Engenharia de Controle e Automação<br>
+            <i aria-hidden="true" class="fa fa-calendar text-original-dark-blue"></i> Em andamento<br>
+          </p>
+          <small class="text-secondary obs text-center">
+            <a href="#" target="_blank"><i aria-hidden="true" class="fa fa-linkedin"></i></a> &nbsp;
+            <a href="#" target="_blank"><i aria-hidden="true" class="fa fa-github"></i></a> &nbsp;
+            <a href="#" target="_blank">Lattes</a>
+          </small>
+        </div>
+    </div> <!-- close col-md-4 -->
+    <div class="col-md-4"> <!-- offset-md-3 -->
+        <div class="card card-body mb-3">
+          <h5 class="card-title">
+            <img class="rounded-circle float-left mr-3" src="./img/palada.jpg" alt="Foto de Wellington Leote" style="width:60px;">
+            Wellington dos Santos Leote
+          </h5>
+          <h6 class="card-subtitle mb-2 text-muted font-weight-light">Sistema portátil de aquisição de sinais de ECG para diagnóstico local ou remoto de cardiopatias.</h6>
+          <p class="card-text">
+            <i aria-hidden="true" class="fa fa-mortar-board text-original-dark-blue"></i> Trabalho de Conclusão do Curso<br> 
+            <i aria-hidden="true" class="fa fa-check text-original-dark-blue"></i> Engenharia de Controle e Automação<br>
+            <i aria-hidden="true" class="fa fa-calendar text-original-dark-blue"></i> Em andamento<br>
+          </p>
+          <small class="text-secondary obs text-center">
+            <a href="#" target="_blank"><i aria-hidden="true" class="fa fa-linkedin"></i></a> &nbsp;
+            <a href="#" target="_blank"><i aria-hidden="true" class="fa fa-github"></i></a> &nbsp;
+            <a href="#" target="_blank">Lattes</a>
+          </small>
+        </div>
+     </div> <!-- close col-md-4 -->
+ 
+  </div>
+
+</section>
+
+<section class="mt-3">
+
+  <a name="recursos"></a><h2>Recursos</h2>
+
+  <div class="row">
+
+      <div class="col-12 col-md-4"> <!-- <div class="coluna-mobile coluna-desktop"> -->
+          <div class="card text-center">  <!-- style="width: 18rem;" -->
+            <div class="card-body">
+              <h5 class="card-title text-original-dark-blue"><i class="fa fa-microchip fa-2x" aria-hidden="true"></i></h5>
+              <h6 class="card-subtitle mb-2 text-muted">Hardware</h6>
+              <p class="card-text">
+                Placa ST <br>
+                Demais comprinhas Fabio
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <a href="#">2 Placas ST</a>
+              </li>
+              <li class="list-group-item text-muted">
+                <a href="#">Chip de Front-End de 8 canais</a>
+              </li>
+              <li class="list-group-item text-muted">
+                <a href="#">Simulador de ECG</a>
+              </li>
+            </ul>
+          </div>
+
+                         
+      </div>
+
+      <div class="col-6 col-md-4"> <!-- <div class="coluna-mobile coluna-desktop"> -->
+          <div class="card text-center">  <!-- style="width: 18rem;" -->
+            <div class="card-body">
+              <h5 class="card-title text-original-dark-blue"><i class="fa fa-book fa-2x" aria-hidden="true"></i></h5>
+              <h6 class="card-subtitle mb-2 text-muted">Material p/ Estudo</h6>
+              <p class="card-text">link lista Papers</p>
+            </div>
+          </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <a href="#">Lista de Papers 1</a>
+              </li>
+            </ul>
+                         
+      </div>
+
+      <div class="col-6 col-md-4"> <!-- <div class="coluna-mobile coluna-desktop"> -->
+          <div class="card text-center">  <!-- style="width: 18rem;" -->
+            <div class="card-body">
+              <h5 class="card-title text-original-dark-blue"><i class="fa fa-github fa-2x" aria-hidden="true"></i></h5>
+              <h6 class="card-subtitle mb-2 text-muted">Repositorios</h6>
+<!-- 
+              <p class="card-text">
+                <a href="https://github.com/andredelmestre" target="_blank">Front-end</a><br>
+                <a href="https://github.com/andredelmestre" class="text-reset card-link" target="_blank">Back-end</a>
+              </p>
+ -->
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <a href="https://github.com/fabioitturriet/Discovery-kit-with-STM32F769NI-MCU-FIRMWARE-SDCARD_ADC_UART" target="_blank">Código fonte do Firmware placa ST</a>
+              </li>
+              <li class="list-group-item text-muted">
+                <a href="https://github.com/MarceloSkank/ECGRemote" target="_blank">Código fonte do servidor (projeto ECG)</a>
+              </li>
+              <li class="list-group-item text-muted">
+                <a href="https://github.com/MarceloSkank/ECGFrontEnd" target="_blank">Código fonte do PWA (projeto ECG)</a>
+              </li>
+            </ul>
+
+          </div>
+                         
+      </div>
+
+
+ 
+   </div>   
+ </section>
+
+<section class="mt-3">
+  <a name="sobre"></a><h2>Sobre</h2>
+  <div class="row">
+
+      <div class="col-12 col-md-4"> <!-- <div class="coluna-mobile coluna-desktop"> -->
+          <div class="card text-white bg-dark text-center">  <!-- style="width: 18rem;" -->
+            <div class="card-body">
+              <h5 class="card-title text-original-yellow"><i class="fa fa-user fa-2x" aria-hidden="true"></i></h5>
+              <h6 class="card-subtitle mb-2 text-muted">Something</h6>
+              <p class="card-text">
+                Duis mollis, <br> est non commodo luctus,
+              </p>
+            </div>
+
+          </div>
+                         
+      </div>
+
+      <div class="col-6 col-md-4"> <!-- <div class="coluna-mobile coluna-desktop"> -->
+          <div class="card text-center">  <!-- style="width: 18rem;" -->
+            <div class="card-body">
+              <h5 class="card-title text-original-dark-blue"><i class="fa fa-address-card fa-2x" aria-hidden="true"></i></h5>
+              <h6 class="card-subtitle mb-2 text-muted">Something</h6>
+              <p class="card-text">
+               Duis mollis, <br> est non commodo luctus,
+              </p>
+            </div>
+          </div>
+                         
+      </div>
+
+      <div class="col-6 col-md-4"> <!-- <div class="coluna-mobile coluna-desktop"> -->
+          <div class="card text-center">  <!-- style="width: 18rem;" -->
+            <div class="card-body">
+              <h5 class="card-title text-original-dark-blue"><i class="fa fa-user-plus fa-2x" aria-hidden="true"></i></h5>
+              <h6 class="card-subtitle mb-2 text-muted">Something</h6>
+              <p class="card-text">
+                Duis mollis, <br> est non commodo luctus,
+              </p>
+            </div>
+          </div>
+                         
+      </div>
+   </div>   
+</section>
+
+</div>
+
+
+  <hr>
+  <footer>
+      <p class="text-center">
+        <a href="https://github.com/andredelmestre" class="nav-item" target="_blank"><i aria-hidden="true" class="fa fa-lg fa-github"></i></a>
+
+        <a href="https://scholar.google.com.br/citations?user=zGc0bAQAAAAJ&hl=pt-BR&oi=ao" class="nav-item" target="_blank"><i aria-hidden="true" class="fa fa-lg fa-google"></i></a>
+
+        <a href="https://www.linkedin.com/in/andr%C3%A9-lu%C3%ADs-del-mestre-martins-421b43a1/" class="nav-item" target="_blank"><i aria-hidden="true" class="fa fa-lg fa-linkedin"></i></a>
+      </p>
+  </footer>
+
+
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" defer></script>
+
+ <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Serviços",
+    "name": "Professor André del Mestre",
+    "url": "http://tsi.charqueadas.ifsul.edu.br/~delmestre/",
+    "address": "",
+    "sameAs": [
+      "https://github.com/andredelmestre",
+      "https://scholar.google.com.br/citations?user=zGc0bAQAAAAJ&hl=pt-BR&oi=ao",
+      "https://www.linkedin.com/in/andr%C3%A9-lu%C3%ADs-del-mestre-martins-421b43a1/"
+    ]
+  }
+
+</script>
+
+<script type="text/javascript">
+
+$('#disciplinasCarousel').carousel({
+  interval: 5000
+});
+
+$('#alunosCarousel').carousel({
+  interval: 5000
+});
+
+$('.carousel .carousel-item').each(function(){
+    var minPerSlide = 3;
+    var next = $(this).next();
+    if (!next.length) {
+    next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+    
+    for (var i=0;i<minPerSlide;i++) {
+        next=next.next();
+        if (!next.length) {
+        	next = $(this).siblings(':first');
+      	}
+        
+        next.children(':first-child').clone().appendTo($(this));
+      }
+});
+
+// $(document).ready(function(){
+//     $('[data-toggle="popover"]').popover();   
+// });
+
+// $('.zoom').hover(
+//        function(){ $(this).addClass('bg-secondary'); $(this).addClass('text-white'); },
+//        function(){ $(this).removeClass('bg-secondary'); $(this).removeClass('text-white'); }
+// )
+
+
+</script>
+
+
+</body>
+
+</html>
