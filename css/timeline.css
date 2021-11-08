@@ -272,6 +272,10 @@ header{
     position:relative;
 }
 
+.img-fluid-test{
+  width:320px;
+}
+
 
 @media screen and (max-width: 768px) {
     .message {
@@ -299,6 +303,10 @@ header{
     .imagem{
       width: 60px;
     }
+  .img-fluid-test{
+    width:0px;
+    display: inline-block;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -322,9 +330,12 @@ header{
       margin-top: 200px;
     }
     .imagem{
-      width: 60px;
+      width: 0px;
     }
 
+  .img-fluid-test{
+    width:0px;
+  }
 }
 
 ul.no-bullet {
@@ -346,5 +357,4 @@ ul.no-bullet {
 .img-fluid{
 display: block;
 }
-
 
