@@ -236,35 +236,29 @@ a {
       <div class="card">
         <div class="card-header">
           <h5>
-            <span class="numero"></span> - Técnicas não invasivas de estimação de pressão arterial
+            <span class="numero"></span> - Técnicas não invasivas de estimação e monitoramento contínuo de pressão arterial
           </h5>
         </div>
         <div class="card-body">
-          <p class="card-text">O método mais usado de a</p> 
+          <p class="card-text">O método mais usado de aferição de pressão arterial é o oscilométrico através de um instrumento conhecido como <a href="https://www.tuasaude.com/esfigmomanometro/" target="_blank">esfigmomanômetro</a>. 
+		Esse instrumento conta com uma bolsa inflável conectada a uma bomba de ar e a um manômetro para medir a pressão dentro da bolsa. Porém, a aferição com esse método necessita o uso de um estetoscópio por enfermeiros ou médicos. 
+		  Por esse motivo, a aferição não é possível de ser realizado pelo próprio indivíduo tornando praticamente impossível o monitoramento contínuo desse sinal vital. </p> 
 
-          <p class="card-text">Nao ha razao para sobrecarregar as redes transmitindo os dados sem qualquer tipo de tratamento </p>
-
-          <p class="card-text">Qualquer tipo de comunicacao seria beneficiada, mas essa tecnica eh especialmente benefica para IoT, pois pode habilitar comunicacao low-power de alto alcance (LoRa, SigFox) </p>
-
-          <p class="card-text">
-            O plano é (i) estudar os algoritmos de compactação classicos e especificos para ECG e (ii) aplicar a <strong>compactação</strong> - na nuvem antes de enviar para os PWAs ou num dispositivo de hardware antes de enviar um ECG - e a (iii) <strong>DEScompactação</strong> antes de armazenar os dados no BD.
-          </p>
-          <p>
-            TCC no tema de compressao de sinais ECG
-          </p>
-
+         
+          <strong>Objetivo da Proposta:</strong>
+		
           <ul>
             <li>
-              Qualquer aplicacao de compacatacao/descompactacao de dados dentro de CloudECG.
+              Procurar na literatura diferentes técnicas de estimação de pressão arterial
             </li>
             <li>
-              Implementacao e Comparacao entre algoritmos de compacatacao/descompactacao de biosinais.
+              Desenvolver dispositivos eletrônicos que viabilizam a técnica escolhida;
             </li>
             <li>
-              Receber um ECG completo do ECG device;
+              Implementar técnica(s) na plataforma e comparar seus desempenhos;
             </li>
             <li>
-              Validador de FHIR - um programa em qualquer linguagem que verifica se um arquivo esta dentro do padrao FHIR;
+              Validar os resultados obtido através de comparação com métodos consolidados;
             </li>
           </ul>
 
