@@ -594,6 +594,7 @@ a {
 
 </section>
 
+
 <section class="mt-3">
 
   <a name="recursos"></a><h2>Recursos</h2>
@@ -626,8 +627,8 @@ a {
           </div>
       </div>
 
-      <div class="col-md-4"> <!-- <div class="coluna-mobile coluna-desktop"> -->
-          <div class="card text-center mt-3">  <!-- style="width: 18rem;" -->
+<!--      <div class="col-md-4"> 
+          <div class="card text-center mt-3"> 
             <div class="card-body">
               <h5 class="card-title text-original-dark-blue"><i class="fa fa-book fa-2x" aria-hidden="true"></i></h5>
               <h6 class="card-subtitle mb-2 text-muted">Material p/ Estudo</h6>
@@ -641,7 +642,7 @@ a {
           </div>
       </div>
 
-<!--       <div class="col-md-3">
+       <div class="col-md-4">
           <div class="card text-white bg-dark text-center mt-3">
             <div class="card-body">
               <h5 class="card-title text-original-yellow"><i class="fa fa-info-circle fa-2x" aria-hidden="true"></i></h5>
@@ -681,11 +682,23 @@ a {
                 <a href="https://github.com/MarceloSkank/ECGFrontEnd" target="_blank">Código fonte do PWA (projeto ECG)</a>
               </li>
             </ul>
-
           </div>
-                         
       </div>
 
+      <div class="col-md-4"> <!-- <div class="coluna-mobile coluna-desktop"> -->
+          <div class="card text-center mt-3">  <!-- style="width: 18rem;" -->
+            <div class="card-body">
+              <h5 class="card-title text-original-dark-blue"><i class="fa fa-calendar fa-2x" aria-hidden="true"></i></h5>
+              <h6 class="card-subtitle mb-2 text-muted">Eventos</h6>
+
+              <p class="card-text">
+                Deadlines e datas dos eventos alvo que Grupo IF4Health deseja submeter trabalhos acadêmicos
+              </p>
+
+            </div>
+            <iframe id="calendarCharq" src="" height="360" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+          </div>
+      </div>
 
  
    </div>   
@@ -742,6 +755,14 @@ a {
     ]
   }
 
+</script>
+<script type="text/javascript">
+    setTimeout(function() {
+    var f = document.getElementById('calendarCharq');
+    f.src = 'https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FSao_Paulo&src=Y19kcGdvbmd2dGpwODlmdGgxYTFxNmNzOGZma0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23E67C73';
+
+    console.log('Calendar loaded after 1s');
+    }, 1000);
 </script>
 
 <script type="text/javascript">
