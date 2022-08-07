@@ -93,11 +93,22 @@ a {
     .carousel-inner .carousel-item > div:first-child {
         display: block;
     }
+    .carousel-inner-2 .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner-2 .carousel-item > div:first-child {
+        display: block;
+    }
 }
 
 .carousel-inner .carousel-item.active,
 .carousel-inner .carousel-item-next,
 .carousel-inner .carousel-item-prev {
+    display: flex;
+}
+.carousel-inner-2 .carousel-item.active,
+.carousel-inner-2 .carousel-item-next,
+.carousel-inner-2 .carousel-item-prev {
     display: flex;
 }
 
@@ -113,10 +124,18 @@ a {
     .carousel-inner .carousel-item-prev {
       transform: translateX(-33.333%);
     }
+    .carousel-inner-2 .carousel-item-right,
+    .carousel-inner-2 .carousel-item-left{ 
+      transform: translateX(0);
+    }
 }
 
 .carousel-inner .carousel-item-right,
 .carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+}
+.carousel-inner-2 .carousel-item-right,
+.carousel-inner-2 .carousel-item-left{ 
   transform: translateX(0);
 }
 
@@ -194,46 +213,117 @@ a {
     </div>
 
 </section>
-
 <section class="mt-3">
   <a name="projetos"></a><h2>Projetos</h2>
   <div class="row">
-    <div class="col-12">
-	    <div class="card">
-	      <img src="./logo/overview.jpeg" loading="lazy" class="card-img-top" alt="Metodologia ODA multicamada">
-	      <div class="card-body">
-          <p class="card-text">
-           <span class="font-weight-bold">Projeto de pesquisa aprovado no Edital PROPESP 04-2021:</span> No exemplo da figura, na linha de pesquisa IoT in HealthCare, tem dois alunos da ECA desenvolvendo <span class="font-weight-bold">dispositivo físico</span> para aquisição de sinais de eletrocardiograma (ECG device). Também há um aluno do TSI no <span class="font-weight-bold">back-end</span> para identificação de cardiopatias e no <span class="font-weight-bold">front-end</span> para visualização do ECG. Há muitas outras frentes de trabalho somente neste projeto que necessitam de mais alunos.
-          </p>
-	 <p class="card-text">
-		<strong>Vigência:</strong> AGO/21 até AGO/22<br> 
-		<strong>Coordenador:</strong> Prof. Fábio Itturriet<br>
-		<strong>Membros:</strong> Prof. André Del Mestre e Prof. Juliano Machado<br>
-		<strong>Bolsistas:</strong> Patrick Anderson Lacerda Morás (FAPERGS), Job dos Santos Coleraus (FAPERGS) e Marcelo Da Silva Janke (Voluntário)<br>
-		
-		
-		  </p>
-	        <p class="card-text">
-	          <span class="text-original-blue font-weight-bold">Aluno do TSI ou ECA:</span>
-	          <ul class="no-bullet">
-	            <li> <i aria-hidden="true" class="fa fa-check text-original-blue"></i> Desenvolva seu TCC ou sua Pesquisa conosco; </li>
-	            <li> <i aria-hidden="true" class="fa fa-check text-original-blue"></i> Temos varias sugestões de trabalhos; </li>
-	          </ul>
-	        </p>
-          <p class="card-text text-center">
-            <a class="btn btn-success mx-3" href="./html/tcc_ECA.html" role="button">Alunos ECA</a>
-            <a class="btn btn-success mx-3" href="./html/tcc_tsi.html" role="button">Alunos TSI</a>
-          </p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">
-          <span class="badge badge-pill badge-warning"><i class="fa fa-hourglass-half"></i> Em Andamento</span> Sistema de Assistência Médica Remota Baseado em IoT para Monitoramento e Diagnóstico Automatizado de Cardiopatias
-        </li>
-        <li class="list-group-item text-muted">
-          <span class="badge badge-pill badge-primary"><i class="fa fa-check"></i> Finalizado</span> Internet das Coisas Aplicado ao Desenvolvimento de Sistemas para Diagnóstico Remoto de Cardiopatias
-        </li>
-      </ul>
-    </div>
+    <div id="projetosCarousel" class="carousel slide w-100" data-ride="carousel">
+      <div class="carousel-inner w-100" role="listbox">
+
+        <div class="carousel-item active">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">CloudECG - Interoperabilidade e Segurança para Registros Eletrônicos de Saúde de Eletrocardiogramas (ECG) na Nuvem</div>
+              <img src="./img/wide-cloudserver.png" loading="lazy" class="card-img-top" alt="Projeto CloudECG">
+              <div class="card-body">
+                <p class="card-text">
+                   <span class="badge badge-pill badge-warning"><i class="fa fa-hourglass-half"></i> Em Andamento</span> 
+                   <span class="font-weight-bold">Projeto de pesquisa aprovado no Edital PROPESP 09-2022:</span> O objetivo geral deste trabalho é utilizar os padrões internacionais FHIR e openEHR para garantir interoperabilidade, segurança e privacidade de dados na transmissão e na autenticação de exames ECG em dispositivos ECG e em aplicações web por meio da API CloudECG. <a href="./html/tcc_tsi.html">Clique aqui</a> e saiba mais sobre este projeto.
+                </p>
+                <p class="card-text">
+                  <strong>Vigência:</strong> SET/22 até SET/23<br> 
+                  <strong>Coordenador:</strong> Prof. André Del Mestre<br>
+                  <strong>Membros:</strong> Prof. Fábio Itturriet e Prof. Juliano Machado<br>
+                  <strong>Bolsistas:</strong> Acssa Passos (FAPERGS), Vinicius Borges (IFSul)
+                </p>
+                <p class="card-text">
+                  <span class="text-original-blue font-weight-bold">Aluno do TSI ou ECA:</span>
+                  <ul class="no-bullet">
+                    <li> <i aria-hidden="true" class="fa fa-check text-original-blue"></i> Desenvolva seu TCC ou sua Pesquisa conosco; </li>
+                    <li> <i aria-hidden="true" class="fa fa-check text-original-blue"></i> Temos varias sugestões de trabalhos; </li>
+                  </ul>
+                </p>
+                <p class="card-text text-center">
+                  <a class="btn btn-success mx-3" href="./html/tcc_ECA.html" role="button">Alunos ECA</a>
+                  <a class="btn btn-success mx-3" href="./html/tcc_tsi.html" role="button">Alunos TSI</a>
+                </p>
+              </div>
+            </div><!-- close card item -->
+          </div><!-- close col-12 -->
+        </div><!-- close corousel item -->
+
+        <div class="carousel-item">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">Sistema de assistência médica remota baseado em IoT para monitoramento e diagnóstico automatizado de cardiopatias</div>
+              <img src="./img/overview-sem-titulo.jpeg" loading="lazy" class="card-img-top" alt="Projeto 2021">
+              <div class="card-body">
+                <p class="card-text">
+                   <span class="badge badge-pill badge-primary"><i class="fa fa-check"></i> Finalizado</span>
+                   <span class="font-weight-bold">Projeto de pesquisa aprovado no Edital PROPESP 04-2021:</span> N<strong>Projeto de pesquisa aprovado no Edital PROPESP 06-2020:</strong> No exemplo da figura, na linha de pesquisa IoT in HealthCare, teve alunos da ECA desenvolvendo <strong>dispositivo físico</strong> para aquisição de sinais de eletrocardiograma (ECG device). O <strong>sistema embarcado</strong> serve para exibir o ECG localmente e enviar os dados para internet. Também houve alunos do TSI no <strong>back-end</strong> para armazenamento e processamento do ECG e no <strong>front-end</strong> para visualização do ECG. 
+                </p>
+                <p class="card-text">
+                  <strong>Vigência:</strong> AGO/21 até AGO/22<br> 
+                  <strong>Coordenador:</strong> Prof. Fábio Itturriet<br>
+                  <strong>Membros:</strong> Prof. André Del Mestre e Prof. Juliano Machado<br>
+                  <strong>Bolsistas:</strong> Patrick Anderson Lacerda Morás (FAPERGS), Job dos Santos Coleraus (FAPERGS) e Marcelo Da Silva Janke (Voluntário)<br>
+                </p>
+                <p class="card-text">
+                  <span class="text-original-blue font-weight-bold">Aluno do TSI ou ECA:</span>
+                  <ul class="no-bullet">
+                    <li> <i aria-hidden="true" class="fa fa-check text-original-blue"></i> Desenvolva seu TCC ou sua Pesquisa conosco; </li>
+                    <li> <i aria-hidden="true" class="fa fa-check text-original-blue"></i> Temos varias sugestões de trabalhos; </li>
+                  </ul>
+                </p>
+                <p class="card-text text-center">
+                  <a class="btn btn-success mx-3" href="./html/tcc_ECA.html" role="button">Alunos ECA</a>
+                  <a class="btn btn-success mx-3" href="./html/tcc_tsi.html" role="button">Alunos TSI</a>
+                </p>
+              </div>
+            </div><!-- close card item -->
+          </div> <!-- close col-12 -->
+        </div><!-- close corousel item -->
+
+        <div class="carousel-item">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">Internet das Coisas Aplicado ao Desenvolvimento de Sistemas para Diagnóstico Remoto de Cardiopatias</div>
+              <img src="./img/overview-sem-titulo.jpeg" loading="lazy" class="card-img-top" alt="Projeto 2020">
+              <div class="card-body">
+                <p class="card-text">
+                   <span class="badge badge-pill badge-primary"><i class="fa fa-check"></i> Finalizado</span>
+                   <strong>Projeto de Inovação aprovado no Edital PROPESP 06-2020:</strong> No exemplo da figura, na linha de pesquisa IoT in HealthCare, teve alunos da ECA desenvolvendo <strong>dispositivo físico</strong> para aquisição de sinais de eletrocardiograma (ECG device). O <strong>sistema embarcado</strong> serve para exibir o ECG localmente e enviar os dados para internet. Também houve alunos do TSI no <strong>back-end</strong> para armazenamento e processamento do ECG e no <strong>front-end</strong> para visualização do ECG. O projeto inteiro foi executado durante a pandemia, impondo enormes dificuldades de toda ordem: comunicação, infraestrutura, mental, etc...
+                </p>
+                <p class="card-text">
+                  <strong>Vigência:</strong> AGO/20 até AGO/21<br> 
+                  <strong>Coordenador:</strong> Prof. André Del Mestre<br>
+                  <strong>Membros:</strong> Prof. Fábio Itturriet<br>
+                  <strong>Bolsistas:</strong> Patrick Anderson Lacerda Morás (FAPERGS), Marcelo Da Silva Janke (CNPq)
+                </p>
+                <p class="card-text">
+                  <span class="text-original-blue font-weight-bold">Aluno do TSI ou ECA:</span>
+                  <ul class="no-bullet">
+                    <li> <i aria-hidden="true" class="fa fa-check text-original-blue"></i> Desenvolva seu TCC ou sua Pesquisa conosco; </li>
+                    <li> <i aria-hidden="true" class="fa fa-check text-original-blue"></i> Temos varias sugestões de trabalhos; </li>
+                  </ul>
+                </p>
+                <p class="card-text text-center">
+                  <a class="btn btn-success mx-3" href="./html/tcc_ECA.html" role="button">Alunos ECA</a>
+                  <a class="btn btn-success mx-3" href="./html/tcc_tsi.html" role="button">Alunos TSI</a>
+                </p>
+              </div>
+            </div><!-- close card item -->
+          </div><!-- close col-12 -->
+        </div><!-- close corousel item -->
+
+      </div>  
+      <a class="carousel-control-prev w-auto" href="#projetosCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark border border-dark" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next w-auto" href="#projetosCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon bg-dark border border-dark" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </div>
       
@@ -456,7 +546,7 @@ a {
               <p class="card-text">
                 <i aria-hidden="true" class="fa fa-search text-original-dark-blue"></i> Projeto de Pesquisa<br> 
                 <i aria-hidden="true" class="fa fa-check text-original-dark-blue"></i> Tecnologia em Sistemas para Internet<br>
-                <i aria-hidden="true" class="fa fa-calendar text-original-dark-blue"></i> Em andamento<br>
+                <i aria-hidden="true" class="fa fa-calendar text-original-dark-blue"></i> Finalizado<br>
               </p>
               <small class="text-center">
                 <div class="btn-group">
@@ -573,7 +663,7 @@ a {
           <div class="col-lg-4">
             <div class="card card-body mb-3">
               <h5 class="card-title">
-                <img class="rounded-circle float-left mr-3" src="./img/douglashenz.jpg" alt="Foto de Douglas Henz" style="width:60px;">
+                <img class="rounded-circle float-left mr-3" src="./img/douglasHenz.jpg" alt="Foto de Douglas Henz" style="width:60px;">
                 Douglas Henz 
               </h5>
               <h6 class="card-subtitle mb-2 text-muted font-weight-light">Estimação de pressão arterial com sensores de fotopletismografia</h6>
@@ -598,8 +688,8 @@ a {
           <div class="col-lg-4">
             <div class="card card-body mb-3">
               <h5 class="card-title">
-                <img class="rounded-circle float-left mr-3" src="./img/" alt="Foto do aluno novo" style="width:60px;">
-                Bolsista André 
+                <img class="rounded-circle float-left mr-3" src="./img/vinicius.jpg" alt="Foto de Vinícius Antunes Borges" style="width:60px;">
+                Vinícius Antunes Borges
               </h5>
               <h6 class="card-subtitle mb-2 text-muted font-weight-light">CloudECG - Interoperabilidade e Segurança para Registros Eletrônicos de Saúde de Eletrocardiogramas (ECG) na Nuvem</h6>
               <p class="card-text">
@@ -610,9 +700,8 @@ a {
               </p>
               <small class="text-center">
                 <div class="btn-group">
-                  <a class="btn btn-sm btn-outline-secondary" href="enderecolattes" target="_blank" role="button">Lattes &raquo;</a>
-                  <a class="btn btn-sm btn-outline-secondary" href="mailto:e-mail_aluno@academico.ifsul.edu.br " target="_blank" role="button"><i aria-hidden="true" class="fa fa-envelope-o"></i> E-mail</a>
-                  <a class="btn btn-sm btn-outline-secondary" href="#" target="_blank" role="button"><i aria-hidden="true" class="fa fa-linkedin"></i></a>
+                  <a class="btn btn-sm btn-outline-secondary" href="http://lattes.cnpq.br/2649758107292190" target="_blank" role="button">Lattes &raquo;</a>
+                  <a class="btn btn-sm btn-outline-secondary" href="mailto:viniciusborges.ch216@academico.ifsul.edu.br " target="_blank" role="button"><i aria-hidden="true" class="fa fa-envelope-o"></i> E-mail</a>
                 </div>
               </small>
             </div>
@@ -883,7 +972,7 @@ a {
 
 <script type="text/javascript">
 
-$('#disciplinasCarousel').carousel({
+$('#projetosCarousel').carousel({
   interval: 5000
 });
 
