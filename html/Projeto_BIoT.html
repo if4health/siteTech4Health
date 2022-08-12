@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>TCC ECA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" href="../img/icone.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="../img/icone.ico" type="image/x-icon"/>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">  
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/timeline.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+<style type="text/css">
+.font-medium{
+  font-size: medium;  
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+  @media (max-width: 768px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* display 3 */
+@media (min-width: 768px) {
+    
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(33.333%);
+    }
+    
+    .carousel-inner .carousel-item-left.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-33.333%);
+    }
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+}
+
+
+</style>
+
+<body>
+
+<nav name="topo" class="navbar navbar-expand-lg fixed-top navbar-dark">
+  <div class="navbar-brand">
+    <a class="nav-item navbar-link" href="http://www.charqueadas.ifsul.edu.br/portal/" target="_blank">           
+    <img src="../logo/if-menu-branco.png" alt="logomarca IFSul branca" class="" style="width:200px;">
+    </a>
+  </div>
+  <button class="navbar-toggler" data-target="#myNavbar" data-toggle="collapse" type="button">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="navbar-nav">
+      <li>
+        <a class="nav-link" href="../index.html"><i aria-hidden="true" class="fa fa-lg fa-home"></i> Home</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#overview"><i aria-hidden="true" class="fa fa-lg fa-info"></i> Visao Geral</a> 
+      </li>
+      <li>
+        <a class="nav-link" href="#tcc"><i aria-hidden="true" class="fa fa-lg fa-book"></i> Sugestao de TCCs</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container" style="margin-top: 70px;">
+
+<section>
+  <div class="row">
+    <a name="overview"></a><h2>VISÃO GERAL</h2>
+          
+    <div class="col-12">
+	     <div class="card-header">
+          <h5>
+            Propostas de TCCs relacionadas com projetos de pesquisa
+          </h5>
+        </div>
+      <div class="card">
+        <img src="../logo/overview.jpeg" loading="lazy" class="card-img-top" alt="Cloud RCG overview">
+       </div>
+        <div class="card-body">
+          <p class="card-text">
+		  <h5>
+            Projeto de Pesquisa aprovado no Edital PROPESP 04-2021: 
+          </h5>
+            Existem diversas possibilidades de trabalhos de conclusão de curso (TCCs) implementando novas funcionalidades ou melhorias no sistema de aquisição e processamento de sinais de ECG. Atualmente, nosso grupo de pesquisa conta com um simulador de ECGs e arritmias cardíacas modelo Handy SIM HS-30, que permite simulações de diferentes condições cardíacas reais. Além disso, possuímos um cabo ECG de 10 vias com blindagem e padrão de cores comercial para simulação de exames de ECG de até 12 derivações. O cabo permite a interligação entre os eletrodos e o circuito eletrônico de condicionamento dos sinais elétricos provenientes do simulador (Frontend ECG). Por fim, os sinais condicionados são digitalizados pelos conversores A/D da plataforma de desenvolvimento Discovery ST32F769-DISC0 da fabricante <strong>STMicroelectronics</strong>. Essa plataforma conta com display LCD de alta resolução e tecnologia touch para criação de telas de configuração e visualização do sinais de ECG. Ademias, a plataforma possui um microcontrolador com core ARM®Cortex®-M7 de 32 bits e um barramento compatível com shields da família Arduino. A figura abaixo apresenta algumas imagens desses módulos supracitados.
+		
+          </p>
+	</div>	
+	 <div class="card">
+        <img src="../img/Idéias TCC.png" loading="lazy" class="card-img-top" alt="Cloud RCG overview">
+	</div>	 
+		 <p class="card-text">
+		
+            A seguir serão apresentadas algumas propostas de temas de trabalho de conclusão de curso que os professores do grupo IF4Health têm interesse em desenvolver pesquisas.       
+		
+          </p>
+        	
+	<!--      
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-muted">
+            <a href="https://ecgremote.herokuapp.com/" target="_blank">CloudECG rodando na nuvem</a>
+          </li>
+          <li class="list-group-item">
+            <a href="https://ecgremote.netlify.app/" target="_blank">Prototipo site PWA rodando sinais ECG</a>
+          </li>
+          <li class="list-group-item">
+            <a href="https://youtu.be/9pYnO2bY8vM" target="_blank">Video de aplicativo PWA rodando em um celular</a>
+          </li>
+          <li class="list-group-item">
+            <a href="https://github.com/MarceloSkank/ECGRemote" target="_blank">Código fonte de CloudECG</a>
+          </li>
+          <li class="list-group-item">
+            <a href="https://github.com/MarceloSkank/ECGFrontEnd" target="_blank">Código fonte do PWA</a>
+          </li>
+          <li class="list-group-item">
+            <a href="https://biosppy.readthedocs.io/en/stable/" target="_blank">Documentacao BioSPPy</a>
+            
+          </li>
+        </ul>
+       -->
+      
+    </div>
+  </div>
+
+  
+</section>
+          <hr>
+
+<section>
+  <a name="tcc"></a><h2>SUGESTÕES</h2>
+
+  <div class="row">
+
+    <div class="col-md-6 mt-3">
+      <!-- <div class="card text-white bg-dark"> -->
+	    <div class="card">
+        <div class="card-header">
+          <h5>
+            <span class="numero"></span> - Compressão eficiente de ECG para healthcare
+          </h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Em geral, o procedimento de diagnóstico de doenças cardíacas demanda a análise de longos exames de ECG. Por isso, os sistemas de aquisição e processamento de sinais de ECG devem possuir grande capacidade de memória para armazenar esse grande volume de dados. Grande parte desses dados é redundante e não necessita ser analisada pelo médico.
+		Por isso, existem técnicas de compressão que visam reduzir esse volume com alguma tipo de perda (distorção controlada) ou sem nenhuma perda de informação. 
+		Em sistemas de telemedicina, a compressão dos dados reduz a quantidade de processamento, memória de armazenamento e a banda de transmissão para servidores localizados na nuvem. </p> 
+
+ 
+
+          <p class="card-text">
+             <strong>Objetivo da Proposta:</strong> 
+	     <ul>
+            <li>
+             Estudar diferentes métodos de compressão de sinais de ECG;
+            </li>
+             <li>
+              Propôr novas técnicas e avaliar seu desempenho comparado com outras soluções do mesmo segmento através de métricas de avaliação de distorção;            </li>
+		     <li>
+	Converter a técnica desenvolvida em algoritmo;
+		     </li>
+		     <li>
+			  Implementar um código C para o microcontrolador presente na plataforma de desenvolvimento;    
+		     </li>
+		     <li>
+			   Realizar testes práticos na plataforma.
+		     </li>
+		</ul>
+		
+		 
+          </p>
+          <p class="card-text">
+           <strong>Habilidades Importantes:</strong> 
+          </p>
+          
+          <ul>
+            <li>
+              Habilidades matemáticas com conceitos de disciplinas como Sinais e Sistemas e Processamento Digital de Sinais;
+            </li>
+	    <li>
+               Programação no MATLAB;
+            </li>	  
+            <li>
+              Programação em linguagem C/C++ para sistemas embarcados;
+            </li>
+            <li>
+               Conhecimentos de eletrônica básica;
+            </li>
+            <li>
+               Vontade de estudar e aprender coisas novas.
+            </li>
+          </ul>
+        </div>
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-muted">
+            <a href="../docs/elgendi2017.pdf" target="_blank">Artigo 1 - Efficient ECG Compression and QRS Detection for E-Health Applications</a>
+          </li>
+          <li class="list-group-item">
+            <a href="../docs/rebollo-neira2019.pdf" target="_blank">Artigo 2 - Efective high compression of ECG signals at low level distortion</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-6 mt-3">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <span class="numero"></span> - Técnicas não invasivas de estimação e monitoramento contínuo de pressão arterial
+          </h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">O método mais usado de aferição de pressão arterial é o oscilométrico através de um instrumento conhecido como <a href="https://www.tuasaude.com/esfigmomanometro/" target="_blank">esfigmomanômetro</a>. 
+		Esse instrumento conta com uma bolsa inflável conectada a uma bomba de ar e a um manômetro para medir a pressão dentro da bolsa. Porém, a aferição com esse método necessita o uso de um estetoscópio por enfermeiros ou médicos. 
+		Por esse motivo, a aferição não é possível de ser realizado pelo próprio indivíduo tornando praticamente impossível o monitoramento contínuo desse sinal vital.</p> 
+
+         
+          <strong>Objetivo da Proposta:</strong>
+		
+          <ul>
+            <li>
+              Procurar na literatura diferentes técnicas de estimação de pressão arterial;
+            </li>
+            <li>
+              Desenvolver dispositivos eletrônicos que viabilizam a técnica escolhida;
+            </li>
+            <li>
+              Implementar técnica(s) na plataforma e comparar seus desempenhos;
+            </li>
+            <li>
+              Validar os resultados obtido através de comparação com métodos consolidados.
+            </li>
+          </ul>
+
+            <p class="card-text">
+           <strong>Habilidades Importantes:</strong> 
+          </p>
+          
+          <ul>
+            <li>
+              Habilidades matemáticas com conceitos de disciplinas como Sinais e Sistemas e Processamento Digital de Sinais;
+            </li>
+	    <li>
+               Programação no MATLAB;
+            </li>	  
+            <li>
+              Programação em linguagem C/C++ para sistemas embarcados;
+            </li>
+            <li>
+               Conhecimentos de eletrônica básica;
+            </li>
+            <li>
+               Vontade de estudar e aprender coisas novas.
+            </li>
+          </ul>
+          <p>
+          </p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-muted">
+            <a href="../docs/ahmadreza2020.pdf" target="_blank">Artigo 1 - A Novel Automated Blood Pressure Estimation Algorithm Using Sequences of Korotkoff Sounds
+signals at low level distortion</a>
+          </li>
+		<li class="list-group-item">
+            <a href="../docs/mousavi2019.pdf" target="_blank">Artigo 2 - Blood pressure estimation from appropriate and inappropriate PPG signals using A whole-based method</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <div class="col-md-6 mt-3">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <span class="numero"></span> - Redes neurais para detecção de cardiopatias 
+          </h5>
+        </div>
+        <div class="card-body">
+          <p> As doenças cardíacas são a principal causa de morte no mundo. Diversas dessas doenças modificam a morfologia do sinal elétrico de ECG. 
+          Por isso, técnicas de monitoramento contínuo com detecção de eventos relacionados com doenças cardíacas são importantes. </p> 
+
+       
+          </ul>
+        </div>
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-muted">
+            <a href="../docs/rahmani2018.pdf" target="_blank">Artigo 1 - Hierarchical Dynamic Goal Management for IoT Systems</a>
+          </li>
+          <li class="list-group-item">
+            <a href="../docs/azimi2017.pdf" target="_blank">Artigo 2 - Hierarchical Fog-assisted Computing Architecture for
+Healthcare IoT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="col-md-6 mt-3">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <span class="numero"></span> - Sensores vestíveis para monitoramento contínuo de saúde baseado em IoT 
+          </h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Internet das coisas é um conceito baseado na interconexão de dispositivos chamados "Smart", como smart watches, Smart bands, através da internet.
+	Atualmente, a área de IoT é utilizada em diversos campos como agricultura, automação residencial, controle de tráfego, smart grid, etc. A área healthcare é uma das que apresentam
+		maior expansão, principalmente aplicada com monitoramento do estado de saúde de pacientes em tempo real. Baseado nisso, buscamos realizar pesquisas com diferentes sensores vestíveis que permitam o monitoramento contínuo de sinais bioelétricos através da internet.  </p> 
+
+      
+        </div>
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-muted">
+            <a href="../docs/farahani2017.pdf" target="_blank">Artigo - Towards fog-driven IoT eHealth: Promises and challenges of IoT in
+medicine and healthcare</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+ <div class="col-12">
+	     <div class="card-header">
+          <h5>
+            Propostas de TCCs <strong>NÃO relacionadas</strong> com projetos de pesquisa
+          </h5>
+        </div>
+	
+
+  </div>
+  
+	
+</section>
+
+
+
+          
+         
+</div>
+
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" defer></script>
+
+
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+
+$('.zoom').hover(
+       function(){ $(this).addClass('bg-secondary'); $(this).addClass('text-white'); },
+       function(){ $(this).removeClass('bg-secondary'); $(this).removeClass('text-white'); }
+)
+$(document).ready(function(){
+    var divs = $(".numero");
+
+	var i;
+	for (i = 0; i < divs.length; i++) {
+		divs[i].innerHTML=i+1;
+	} 
+});
+
+
+</script>
+
+
+</body>
+</html>
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
