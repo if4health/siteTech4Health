@@ -104,15 +104,13 @@ export default function Main(){
         }
       }
 
-      const url = "http://teste-env.eba-x7kutucd.sa-east-1.elasticbeanstalk.com/";
-      const uurrll = "http://teste-env.eba-x7kutucd.sa-east-1.elasticbeanstalk.com/students/data";
-
     useEffect(() => {
-        axios.get(uurrll)
+        axios.get("http://teste-env.eba-x7kutucd.sa-east-1.elasticbeanstalk.com/students/data")
         .then((res) => {
-            console.log(res)
-            data = res.data;
-            let list = [];
+            console.log("AAAAAAAAAAAAAAAAAAAA")
+            console.log(res.data)
+            // data = res.data;
+            // let list = [];
 
             // data.forEach((e) => {
             //     list.push(
