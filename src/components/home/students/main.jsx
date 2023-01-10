@@ -114,7 +114,7 @@ export default function Main(){
     useEffect(() => {
         // axios.get(`${url}students/data`)
         axios({
-            url: `${url}/students/data`,
+            url: `${url}students/data`,
             method: "get",
             headers: configHeaders
         })
