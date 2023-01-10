@@ -105,12 +105,23 @@ export default function Main(){
       }
 
       const url = "http://teste-env.eba-x7kutucd.sa-east-1.elasticbeanstalk.com/";
+      
+      const configHeaders = {
+          "content-type": "application/json",
+          "Accept": "application/json"
+      };
 
     useEffect(() => {
-        axios.get(`${url}students/data`)
+        // axios.get(`${url}students/data`)
+        axios({
+            url: `${url}/students/data`,
+            method: "get",
+            headers: configHeaders
+        })
         .then((res) => {
             data = res.data;
             let list = [];
+
 
             data.forEach((e) => {
                 list.push(
