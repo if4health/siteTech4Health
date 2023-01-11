@@ -111,7 +111,7 @@ export default function Main(){
         fetch("https://catfact.ninja/fact")
         .then((res) => {
             // console.log('"""aaa"""')
-            console.log(res);
+            console.log(res.data);
     //         data = res.data;
     //         let list = [];
 
