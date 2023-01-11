@@ -111,7 +111,7 @@ export default function Main(){
         fetch("http://teste-env.eba-x7kutucd.sa-east-1.elasticbeanstalk.com/students/data")
         .then((res) => {
             // console.log('"""aaa"""')
-            console.log(res.data);
+            console.log(res);
     //         data = res.data;
     //         let list = [];
 
