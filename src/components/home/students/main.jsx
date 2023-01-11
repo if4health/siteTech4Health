@@ -108,7 +108,7 @@ export default function Main(){
 
     useEffect(() => {
         // axios.get(`${url}students/data`)
-        fetch("http://teste-env.eba-x7kutucd.sa-east-1.elasticbeanstalk.com/students")
+        fetch("https://catfact.ninja/fact")
         .then((res) => {
             // console.log('"""aaa"""')
             console.log(res);
