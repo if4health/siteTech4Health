@@ -33,41 +33,41 @@ export default function Main(){
 
     const url = "http://teste-env.eba-x7kutucd.sa-east-1.elasticbeanstalk.com/";
 
-    useEffect(() => {
-        axios.get(`${url}works/data`)
-        .then((res) => {
-            data = res.data;
-            let list = [];
+    // useEffect(() => {
+    //     axios.get(`${url}works/data`)
+    //     .then((res) => {
+    //         data = res.data;
+    //         let list = [];
             
-            data.forEach((e) => {
-                let month;
-                const months = ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"];
-                month = months[e.month - 1];
-                key = key + 1;
+    //         data.forEach((e) => {
+    //             let month;
+    //             const months = ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"];
+    //             month = months[e.month - 1];
+    //             key = key + 1;
 
-                list.push(
-                    <div key={key}>
-                        <span className="badge badge-pill badge-success font-medium">{month + "/" + e.year}</span>
-                        <li>
-                            <h5 className="text-original-dark-blue">
-                                {e.titulo} 
-                            </h5>
-                            <p className="card-text">
-                                <span className="text-muted font-weight-light">
-                                    {e.local}
-                                </span><br/>
-                                Apresentação: <strong>{getAuthors(e.authors)}</strong>
-                                <br/>   
-                                <br/>
-                            </p>
-                        </li>
-                    </div>
-                );  
-            });
-            setWorks(list);
-            setCont(cont + 1);
-        });
-    }, []);
+    //             list.push(
+    //                 <div key={key}>
+    //                     <span className="badge badge-pill badge-success font-medium">{month + "/" + e.year}</span>
+    //                     <li>
+    //                         <h5 className="text-original-dark-blue">
+    //                             {e.titulo} 
+    //                         </h5>
+    //                         <p className="card-text">
+    //                             <span className="text-muted font-weight-light">
+    //                                 {e.local}
+    //                             </span><br/>
+    //                             Apresentação: <strong>{getAuthors(e.authors)}</strong>
+    //                             <br/>   
+    //                             <br/>
+    //                         </p>
+    //                     </li>
+    //                 </div>
+    //             );  
+    //         });
+    //         setWorks(list);
+    //         setCont(cont + 1);
+    //     });
+    // }, []);
 
     return(
         <section className="mt-3">
