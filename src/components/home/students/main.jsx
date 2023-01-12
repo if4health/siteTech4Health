@@ -107,12 +107,7 @@ export default function Main(){
 
     const url = "http://teste-env.eba-x7kutucd.sa-east-1.elasticbeanstalk.com/";
 
-    useEffect(() => {
-        const instance = axios.create({
-          baseURL: 'https://api.example.com'
-        })
-
-        axios.get(`${url}students/data`)
+        axios.get(`${url}students/data/`)
         .then((res) => {
             data = res.data;
             let list = [];
