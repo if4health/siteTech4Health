@@ -107,6 +107,7 @@ export default function Main(){
 
     const url = "https://backend-tq7n.onrender.com/";
 
+    useEffect(() => {
         axios.get(`${url}students/data/`)
         .then((res) => {
             data = res.data;
