@@ -31,7 +31,7 @@ export default function Main(){
         return authors;
       }
 
-    const url = "http://teste-env.eba-x7kutucd.sa-east-1.elasticbeanstalk.com/";
+    const url = "https://backend-tq7n.onrender.com/";
 
     useEffect(() => {
         axios.get(`${url}works/data`)
