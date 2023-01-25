@@ -112,7 +112,7 @@ export default function Main(){
     const url = "https://backend-tq7n.onrender.com/";
 
     useEffect(() => {
-        axios.get(`${url}projects/getAll`)
+        axios.get(`${url}projects/data`)
         .then((res) => {
             data = res.data;
             let list = [];
