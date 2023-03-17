@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import { LeftOutlined, RightOutlined } from '@ant-design/icons'
 import '../../../css/students.css';
+import sad from "../../../img/icons/sad.png";
 
 export default function Main(){
   const [ cont, setCont ] = useState(0);
@@ -85,7 +86,6 @@ export default function Main(){
         if(git != ""){
             console.log(git)
             return <a className="btn btn-sm btn-outline-secondary" href={git} target="_blank" role="button"><i aria-hidden="true" className="fa fa-github"></i></a>
-            
         }
       }
 
@@ -93,14 +93,12 @@ export default function Main(){
         if(din != ""){
             console.log(din)
             return <a className="btn btn-sm btn-outline-secondary" href={din} target="_blank" role="button"><i aria-hidden="true" className="fa fa-linkedin"></i></a>
-            
         }
       }
 
       function insertEmail(email){
         if(email != ""){
             return <a className="btn btn-sm btn-outline-secondary" href={email} target="_blank" role="button"><i aria-hidden="true" className="fa fa-envelope-o"></i> E-mail</a>
-            
         }
       }
 
@@ -112,6 +110,22 @@ export default function Main(){
         .then((res) => {
             data = res.data;
             let list = [];
+
+            if(data.length == 0) {
+                list.push(
+                    <div className="card card-body mb-3">
+                        <h5 className="card-title">
+                            <img className="rounded-circle float-left mr-3" src={sad} alt="desculpe" style={{"width":"60px", "height":"60px"}}/>
+                        </h5>
+                        <h6 className="card-subtitle mb-2 font-weight-light">Algo deu errado</h6>
+                        <p className="text-justify card-text"><br/><br/>
+                            <i aria-hidden="true">Parece que há algo de errado nos nossos servidores, por favor nos informe sobre o erro através do seguinte email:</i><br/><br/>
+                            <i aria-hidden="true" className="text-original-dark-blue text-justify">andremartins@ifsul.edu.br</i><br/><br/>
+                            <i aria-hidden="true">Nos desculpe pela incoveniência</i><br/>
+                        </p>
+                    </div>
+                );  
+            }
 
             data.forEach((e) => {
                 list.push(

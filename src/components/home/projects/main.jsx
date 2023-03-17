@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import axios from 'axios';
 
 import { LeftOutlined, RightOutlined } from '@ant-design/icons'
+import sad from "../../../img/icons/sad.png";
 
 export default function Main(){
     const [ cont, setCont ] = useState(0);
@@ -117,6 +118,23 @@ export default function Main(){
             data = res.data;
             let list = [];
             let key = 0;
+
+            if(data.length == 0) {
+                list.push(
+                    <div className="card" key={key}>
+                        <div className="card-header"><strong>Não foi possível carregar os projetos</strong></div>
+                        <img src={sad} loading="lazy" height={"500rem"} width={"25rem"} className="card-img-top" alt="desculpe"/>
+                        <div className="card-body">
+                            <p className="card-text">
+                            Parece que há algo de errado nos nossos servidores, por favor nos informe sobre o erro através do seguinte email:
+                            </p>
+                            <p className="card-text">
+                            andremartins@ifsul.edu.br
+                            </p>
+                        </div>
+                    </div>
+                );  
+            }
 
             data.forEach((e) => {
                 key += 1;

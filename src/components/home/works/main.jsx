@@ -38,6 +38,30 @@ export default function Main(){
         .then((res) => {
             data = res.data;
             let list = [];
+
+            console.log(data.length)
+
+            if(data.length == 0) {
+                list.push(
+                    <div key={key}>
+                        <span className="badge badge-pill badge-success font-medium">Não foi possível mostrar as publicações</span>
+                        <li>
+                            <h5 className="text-original-dark-blue">
+                            </h5>
+                            <p className="card-text">
+                                <span className="text-muted font-weight-light">
+                                    Parece que há algo de errado nos nossos servidores, por favor nos informe sobre o erro através do seguinte email:
+                                </span><br/>
+                                <span className="text-muted font-weight-light">
+                                    andremartins@ifsul.edu.br
+                                </span>
+                                <br/>   
+                                <br/>
+                            </p>
+                        </li>
+                    </div>
+                ); 
+            }
             
             data.forEach((e) => {
                 let month;
