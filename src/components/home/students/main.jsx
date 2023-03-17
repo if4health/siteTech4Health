@@ -98,7 +98,12 @@ export default function Main(){
 
       function insertEmail(email){
         if(email != ""){
-            return <a className="btn btn-sm btn-outline-secondary" href={email} target="_blank" role="button"><i aria-hidden="true" className="fa fa-envelope-o"></i> E-mail</a>
+            return(
+                <>
+                    <i aria-hidden="true" className="fa fa-envelope text-original-dark-blue"/><i style={{"fontSize":"15px", "fontFamily":"arial", "textDecoration":"none"}}> { email}</i> 
+                </>
+            )
+
         }
       }
 
@@ -137,14 +142,14 @@ export default function Main(){
                                 </h5>
                                 <h6 className="card-subtitle mb-2 text-muted font-weight-light"> {e.quote}</h6>
                                 <p className="card-text">
-                                    <i aria-hidden="true" className="fa fa-mortar-board text-original-dark-blue"></i>{e.tipo}<br/>
-                                    <i aria-hidden="true" className="fa fa-check text-original-dark-blue"></i>{e.curso}<br/>
-                                    <i aria-hidden="true" className="fa fa-calendar text-original-dark-blue"></i>{e.status}<br/>
+                                    <i aria-hidden="true" className="fa fa-mortar-board text-original-dark-blue"></i> {e.tipo}<br/>
+                                    <i aria-hidden="true" className="fa fa-check text-original-dark-blue"></i> {e.curso}<br/>
+                                    <i aria-hidden="true" className="fa fa-calendar text-original-dark-blue"></i> {e.status}<br/>
+                                    {insertEmail(e.email)}
                                 </p>
                                 <small className="text-center">
                                     <div className="btn-group">
                                         {insertLattes(e.lattes)}
-                                        {insertEmail(e.email)}
                                         {insertLinkedin(e.linkedin)}
                                         {insertGithub(e.github)}
                                     </div>
