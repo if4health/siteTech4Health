@@ -5,6 +5,11 @@ import axios from 'axios';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons'
 import sad from "../../../img/icons/sad.png";
 
+import vigency from '../../../hooks/vigency';
+import status from '../../../hooks/status';
+import statusColor from '../../../hooks/statusColor';
+import statusIcon from '../../../hooks/statusIcon';
+
 export default function Main(){
     const [ cont, setCont ] = useState(0);
     const [ projects, setProjects ] = useState([]);
@@ -64,6 +69,8 @@ export default function Main(){
         let string;
         let counter = 0;
 
+        console.log(obj.members);
+
         obj.members.forEach((e) => {
             if(counter == 0){
                 string = e.name;
@@ -94,20 +101,6 @@ export default function Main(){
             }
         });
         return string;
-    }
-
-    function statusColor(status){
-        if(status == "Sendo Planejado"){
-            return "badge badge-pill badge-warning";
-        }
-
-        if(status == "Em Andamento"){
-            return "badge badge-pill badge-warning";
-        }
-
-        if(status == "Finalizado"){
-            return "badge badge-pill badge-primary";
-        }
     }
 
     const url = "https://backend-tq7n.onrender.com/";
@@ -146,11 +139,12 @@ export default function Main(){
                         <div className="card-body">
                             <p className="card-text">
                                 {/* <span className="badge badge-pill badge-primary"><i className="fa fa-check"></i>{e.status}</span> */}
-                                <span className={statusColor(e.status)}><i className="fa fa-check"></i>{e.status}</span>
+                                <span className={statusColor(status(e.beginDate, e.endDate))}><i className={statusIcon(status(e.beginDate, e.endDate))}/><i> </i>{ status(e.beginDate, e.endDate)}</span>
                                 <strong> {e.tittle}</strong>
+                                <p>{e.description}</p>
                             </p>
                             <p className="card-text">
-                                <strong>Vigência:</strong> {e.vigency}<br/> 
+                                <strong>Vigência:</strong> {vigency(e.beginDate, e.endDate)}<br/> 
                                 <strong>Coordenador:</strong> {e.coordinator}<br/>
                                 <strong>Membros:</strong> {membersString(e)}<br/>
                                 <strong>Bolsistas:</strong> {scholarsString(e)}
