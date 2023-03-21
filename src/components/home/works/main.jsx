@@ -31,7 +31,7 @@ export default function Main(){
         return authors;
       }
 
-    const url = "https://backend-tq7n.onrender.com/";
+    const url = "https://testeif4health.herokuapp.com/";
 
     useEffect(() => {
         axios.get(`${url}works/data`)
