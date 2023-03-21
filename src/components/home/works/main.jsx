@@ -39,7 +39,6 @@ export default function Main(){
             data = res.data;
             let list = [];
 
-            console.log(data.length)
 
             if(data.length == 0) {
                 list.push(

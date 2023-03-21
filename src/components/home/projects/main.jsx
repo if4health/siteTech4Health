@@ -69,8 +69,6 @@ export default function Main(){
         let string;
         let counter = 0;
 
-        console.log(obj.members);
-
         obj.members.forEach((e) => {
             if(counter == 0){
                 string = e.name;

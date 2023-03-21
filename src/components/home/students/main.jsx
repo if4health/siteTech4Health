@@ -84,14 +84,12 @@ export default function Main(){
 
       function insertGithub(git){
         if(git != ""){
-            console.log(git)
             return <a className="btn btn-sm btn-outline-secondary" href={git} target="_blank" role="button"><i aria-hidden="true" className="fa fa-github"></i></a>
         }
       }
 
       function insertLinkedin(din){
         if(din != ""){
-            console.log(din)
             return <a className="btn btn-sm btn-outline-secondary" href={din} target="_blank" role="button"><i aria-hidden="true" className="fa fa-linkedin"></i></a>
         }
       }
