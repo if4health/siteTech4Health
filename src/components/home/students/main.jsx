@@ -106,10 +106,11 @@ export default function Main(){
       }
 
 
-    const url = "https://testeif4health.herokuapp.com/";
+    const backendUrl = "https://testeif4health.herokuapp.com/";
+    const bucketUrl = "https://if4health.s3.sa-east-1.amazonaws.com/img/students/";
 
     useEffect(() => {
-        axios.get(`${url}students/data/`)
+        axios.get(`${backendUrl}students/data/`)
         .then((res) => {
             data = res.data;
             let list = [];
@@ -118,7 +119,7 @@ export default function Main(){
                 list.push(
                     <div className="card card-body mb-3">
                         <h5 className="card-title">
-                            <img className="rounded-circle float-left mr-3" src={sad} alt="desculpe" style={{"width":"60px", "height":"60px"}}/>
+                            <img className="rounded-circle float-left mr-3" src={sad} alt="Algo deu errado" style={{"width":"60px", "height":"60px"}}/>
                         </h5>
                         <h6 className="card-subtitle mb-2 font-weight-light">Algo deu errado</h6>
                         <p className="text-justify card-text"><br/><br/>
@@ -135,7 +136,7 @@ export default function Main(){
                         <div key={e._id}>
                             <div className="card card-body mb-3">
                                 <h5 className="card-title">
-                                    <img className="rounded-circle float-left mr-3" src={`${url}images/` + e.mypic} alt={`foto de ${e.name}`} style={{"width":"60px", "height":"60px"}}/>
+                                    <img className="rounded-circle float-left mr-3" src={bucketUrl + e.mypic} alt={`foto de ${e.name}`} style={{"width":"60px", "height":"60px"}}/>
                                     {e.name}
                                 </h5>
                                 <h6 className="card-subtitle mb-2 text-muted font-weight-light"> {e.quote}</h6>

@@ -9,9 +9,10 @@ export default function Main(){
     let key = 0;
 
     function getAuthors(authorsArray){
-        let counter = 0;
         let authors = "";
         let cleanedArray = [];
+
+        console.log(authorsArray);
 
         authorsArray.forEach((e) => {
           cleanedArray.push(e.name);
@@ -20,29 +21,27 @@ export default function Main(){
         cleanedArray.forEach((e) => {
           if(authors == ""){
             authors = authors + e
-            counter += 1;
           }
           else {
             authors = authors + ", " + e;
-            counter += 1;
           }
         });
 
         return authors;
       }
 
-    const url = "https://testeif4health.herokuapp.com/";
+    const backendUrl = "https://testeif4health.herokuapp.com/";
 
     useEffect(() => {
-        axios.get(`${url}works/data`)
-        .then((res) => {
-            data = res.data;
-            let list = [];
-
-
-            if(data.length == 0) {
-                list.push(
-                    <div key={key}>
+            axios.get(`${backendUrl}works/data`)
+            .then((res) => {
+                data = res.data;
+                let list = [];
+                
+                
+                if(data.length == 0) {
+                    list.push(
+                        <div key={key}>
                         <span className="badge badge-pill badge-success font-medium">Não foi possível mostrar as publicações</span>
                         <li>
                             <h5 className="text-original-dark-blue">
@@ -67,7 +66,7 @@ export default function Main(){
                 const months = ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"];
                 month = months[e.month - 1];
                 key = key + 1;
-
+                
                 list.push(
                     <div key={key}>
                         <span className="badge badge-pill badge-success font-medium">{month + "/" + e.year}</span>
@@ -89,9 +88,9 @@ export default function Main(){
             });
             setWorks(list);
             setCont(cont + 1);
-        });
-    }, []);
-
+            });
+        }, []);
+    
     return(
         <section className="mt-3">
             <a name="publicacoes"></a>

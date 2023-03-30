@@ -101,10 +101,11 @@ export default function Main(){
         return string;
     }
 
-    const url = "https://testeif4health.herokuapp.com/";
+    const backendUrl = "https://testeif4health.herokuapp.com/";
+    const bucketUrl = "https://if4health.s3.sa-east-1.amazonaws.com/img/projects/";
 
     useEffect(() => {
-        axios.get(`${url}projects/data`)
+        axios.get(`${backendUrl}projects/data`)
         .then((res) => {
             data = res.data;
             let list = [];
@@ -114,7 +115,7 @@ export default function Main(){
                 list.push(
                     <div className="card" key={key}>
                         <div className="card-header"><strong>Não foi possível carregar os projetos</strong></div>
-                        <img src={sad} loading="lazy" height={"500rem"} width={"25rem"} className="card-img-top" alt="desculpe"/>
+                        <img src={sad} loading="lazy" height={"700rem"} width={"15rem"} className="card-img-top" alt="desculpe"/>
                         <div className="card-body">
                             <p className="card-text">
                             Parece que há algo de errado nos nossos servidores, por favor nos informe sobre o erro através do seguinte email:
@@ -133,7 +134,7 @@ export default function Main(){
                 list.push(
                     <div className="card" key={key}>
                         <div className="card-header">{e.tittle}</div>
-                        <img src={`${url}images/` + e.mypic} loading="lazy" className="card-img-top" alt="Projeto 2021"/>
+                        <img src={bucketUrl + e.mypic} loading="lazy" className="card-img-top" alt="Projeto 2021"/>
                         <div className="card-body">
                             <p className="card-text">
                                 {/* <span className="badge badge-pill badge-primary"><i className="fa fa-check"></i>{e.status}</span> */}
