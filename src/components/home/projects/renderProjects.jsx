@@ -1,5 +1,4 @@
 // modules //
-import vigency from './helpers/vigency';
 import status from './helpers/status';
 import statusColor from './helpers/statusColor';
 import statusIcon from './helpers/statusIcon';
@@ -27,7 +26,7 @@ export default function renderProjects(data){
                         <p>{e.description}</p>
                     </p>
                     <p className="card-text">
-                        <strong>Vigência:</strong> {vigency(e.beginDate, e.endDate)}<br/> 
+                        <strong>Vigência:</strong> {"De " + e.beginDate + " até " + e.endDate}<br/> 
                         <strong>Coordenador:</strong> {e.coordinator}<br/>
                         <strong>Membros:</strong> {membersString(e)}<br/>
                         <strong>Bolsistas:</strong> {scholarsString(e)}

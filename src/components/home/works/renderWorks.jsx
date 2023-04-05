@@ -5,14 +5,9 @@ export default function renderWorks(data){
     let key = 0
                 
     data.forEach((e) => {
-        let month;
-        const months = ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"];
-        month = months[e.month - 1];
-        key += key;
-
         list.push(
             <div key={key}>
-                <span className="badge badge-pill badge-success font-medium">{month + "/" + e.year}</span>
+                <span className="badge badge-pill badge-success font-medium">{e.date}</span>
                 <li>
                     <h5 className="text-original-dark-blue">
                         {e.titulo} 
