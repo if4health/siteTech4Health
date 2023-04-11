@@ -3,8 +3,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import ReactDOM from 'react-dom/client';
 
 import './css/index.css';
-import './css/bootstrap.css';
-import './css/timeline.css';
+import './css';
 
 import Home from './pages/home';
 import Eca from './pages/eca';
