@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 
 import './css/index.css';
 import './css/bootstrap.css';
-import './css/timeline.css';
+import './css/bootstrap.min.css';
 
 import Home from './pages/home';
 import Eca from './pages/eca';
