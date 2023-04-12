@@ -5,7 +5,7 @@ import statusIcon from './helpers/statusIcon';
 import membersString from './helpers/membersString';
 import scholarsString from './helpers/scholarsString';
 
-const bucketUrl = "https://if4health-files.s3.sa-east-1.amazonaws.com/img/projects/";
+const bucketUrl = "https://if4health-files.s3.sa-east-1.amazonaws.com/pdf/";
 
 export default function renderProjects(data){
     let key = 0;
