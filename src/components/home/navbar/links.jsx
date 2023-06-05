@@ -26,6 +26,10 @@ export default function Links(){
                     <li>
                         <a className="nav-link" href="#recursos"> <i aria-hidden="true" className="fa fa-lg fa-share-alt"></i> Recursos</a>
                     </li>
+
+                    <li>
+                        <a className="nav-link" href="/LinkTreeList"> <i aria-hidden="true" className="fa fa-lg fa-link"></i> Link Trees</a>
+                    </li>
                 </ul>
             </div>
         </>
