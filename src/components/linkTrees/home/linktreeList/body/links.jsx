@@ -12,7 +12,7 @@ export default function Links(){
     const [ timeOut, setTimeOut ] = useState(false);
     const [ loading, setLoading ] = useState(true); 
 
-    const backendUrl = "http://localhost:8080/";
+    const backendUrl = "https://if4health.herokuapp.com/";
 
     useEffect(() => {
         axios   
