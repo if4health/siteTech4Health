@@ -1,4 +1,4 @@
-import logo from '../../../img/icons/if-menu-branco.png'
+import logo from '../../../../../img/icons/if-menu-branco.png'
 
 export default function Logo(){
     const style = {
