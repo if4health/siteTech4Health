@@ -1,0 +1,11 @@
+.dowload-button{
+    margin-left: 0.2rem;
+    border: none;
+    color: white;
+    background-color: #eab000;
+}
+
+.dowload-button:hover{
+    border: solid rgb(0, 123, 255) 0.25rem;
+    transition: 0.5s;
+}
