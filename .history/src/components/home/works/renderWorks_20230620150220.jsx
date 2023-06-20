@@ -3,11 +3,7 @@ import "../../../css/renderWorks.css";
 
 export default function renderWorks(data){
     let list = [];
-    let key = 0;
-
-    function dowloadWork(link){
-        console.log(link)
-    }
+    let key = 0
                 
     data.forEach((e) => {
         list.push(
@@ -15,7 +11,7 @@ export default function renderWorks(data){
                 <div key={key}>
                     <span className="badge badge-pill badge-success font-medium">{e.date}</span>
                     <span className="dowload-button badge badge-pill badge-success font-medium">
-                        <i className="fa fa-download" aria-hidden="true" onClick={dowloadWork("asd")}></i>
+                        <i className="fa fa-download" aria-hidden="true"></i>
                     </span>
                     <li>
                         <h5 className="text-original-dark-blue">
