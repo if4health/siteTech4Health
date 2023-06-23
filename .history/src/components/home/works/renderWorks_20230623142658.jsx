@@ -13,10 +13,12 @@ export default function renderWorks(data){
         list.push(
             <>
                 <div key={key}>
-                    <span className="badge badge-pill badge-success font-medium">{e.date}</span>&nbsp;
-                        <a href={"https://if4health-files.s3.sa-east-1.amazonaws.com/pdf/" + e.mywork} className="btn btn-success badge badge-pill font-medium">
-                            <i className="fa fa-download" id="dowload" aria-hidden="true"></i>
+                    <span className="badge badge-pill badge-success font-medium">{e.date}</span>
+                    <span className="dowload-button badge badge-pill badge-success font-medium" >
+                        <a href="e.mywork" style={{"width": "100%", "height": "100%"}}>
+                            <i  className="fa fa-download" id="dowload" aria-hidden="true"></i>
                         </a>
+                    </span>
                     <li>
                         <h5 className="text-original-dark-blue">
                             {e.titulo} 

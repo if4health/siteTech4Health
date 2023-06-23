@@ -1,0 +1,21 @@
+.dowload-button{
+    margin-left: 0.2rem;
+    border: none;
+    color: white;
+}
+
+.dowload-button:hover{
+    border: solid rgb(27, 42, 52) 0.05rem;
+    background-color: rgb(253, 253, 253);
+
+    transition: 0.2s;
+}
+
+.dowload-button:active{
+    /* border: none */
+}
+
+.dowload-button:onmouseleave {
+    /* border: none;
+    transition: 0.5s; */
+}

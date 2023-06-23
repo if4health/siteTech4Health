@@ -13,7 +13,7 @@ export default function renderWorks(data){
         list.push(
             <>
                 <div key={key}>
-                    <span className="badge badge-pill badge-success font-medium">{e.date}</span>&nbsp;
+                    <span className="badge badge-pill badge-success font-medium">{e.date}</span>&nbsp;&nbsp;
                         <a href={"https://if4health-files.s3.sa-east-1.amazonaws.com/pdf/" + e.mywork} className="btn btn-success badge badge-pill font-medium">
                             <i className="fa fa-download" id="dowload" aria-hidden="true"></i>
                         </a>
@@ -33,6 +33,8 @@ export default function renderWorks(data){
                 </div>
                 <br/>
                 <br/>
+
+                /
             </>
         );  
     });
