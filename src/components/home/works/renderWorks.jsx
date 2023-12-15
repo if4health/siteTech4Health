@@ -4,10 +4,6 @@ import "../../../css/renderWorks.css";
 export default function renderWorks(data){
     let list = [];
     let key = 0;
-
-    function dowloadWork(link){
-        console.log(link)
-    }
                 
     data.forEach((e) => {          
         list.push(

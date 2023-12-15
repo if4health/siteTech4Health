@@ -11,19 +11,44 @@ export default function renderProjects(data){
     let key = 0;
     let list = [];
 
+    const containerStyle = {
+        width: '100%',
+        height: '20rem',
+        overflow: 'hidden',
+        display: 'flex',
+        alignItems: 'center',
+    };
+
+    const imageStyle = {
+        width: '100%',
+        maxWidth: '100%',
+        maxHeight: '100%',
+        objectFit: 'cover',
+    };
+    
     data.forEach((e) => {
         key += 1;
 
+        const isDescriptionLong = e.description.length > 20;
+            const descriptionStyle = isDescriptionLong
+                ? {
+                    maxHeight: '5rem',
+                    overflow: 'auto'
+                }
+                : {};
+        
         list.push(
             <div className="card" key={key}>
                 <div className="card-header">{e.tittle}</div>
-                <img src={bucketUrl + e.mypic} loading="lazy" className="card-img-top" alt="Projeto 2021"/>
+                <div style={containerStyle}>
+                    <img src={bucketUrl + e.mypic} loading="lazy" style={imageStyle} className="card-img-top" alt="Projeto 2021"/>
+                </div>
                 <div className="card-body">
                     <p className="card-text">
                         {/* <span className="badge badge-pill badge-primary"><i className="fa fa-check"></i>{e.status}</span> */}
                         <span className={statusColor(status(e.beginDate, e.endDate))}><i className={statusIcon(status(e.beginDate, e.endDate))}/><i> </i>{ status(e.beginDate, e.endDate)}</span>
                         <strong> {e.tittle}</strong>
-                        <p>{e.description}</p>
+                        <p style={descriptionStyle}>{e.description}<br></br><br></br><br></br></p>
                     </p>
                     <p className="card-text">
                         <strong>Vigência:</strong> {"De " + e.beginDate + " até " + e.endDate}<br/> 
