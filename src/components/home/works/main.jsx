@@ -22,7 +22,7 @@ export default function Main(){
                 .then((res) => {
                     const list = renderWorks(res.data);
                     setLoading(false);
-                    setWorks(list);
+                    setWorks(list.reverse());
                 })
 
                 .catch((err) => {

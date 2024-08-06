@@ -4,7 +4,7 @@ export default function Repos(){
             <div className="card text-center mt-3">   
                 <div className="card-body">
                     <h5 className="card-title text-original-dark-blue"><i className="fa fa-github fa-2x" aria-hidden="true"></i></h5>
-                    <h6 className="card-subtitle mb-2 text-muted">Repositorios</h6>
+                    <h6 className="card-subtitle mb-2 text-muted">Repositórios</h6>
                     <p className="card-text">
                         Lista de softwares com código aberto desenvolvidos pelo Grupo IF4Health
                     </p>
@@ -14,10 +14,7 @@ export default function Repos(){
                     <a href="https://github.com/fabioitturriet/Discovery-kit-with-STM32F769NI-MCU-FIRMWARE-SDCARD_ADC_UART" target="_blank">Código fonte do Firmware placa ST</a>
                     </li>
                     <li className="list-group-item text-muted">
-                    <a href="https://github.com/MarceloSkank/ECGRemote" target="_blank">Código fonte do servidor (projeto ECG)</a>
-                    </li>
-                    <li className="list-group-item text-muted">
-                    <a href="https://github.com/MarceloSkank/ECGFrontEnd" target="_blank">Código fonte do PWA (projeto ECG)</a>
+                    <a href="https://github.com/if4health" target="_blank">Código fonte do grupo IF4Health (Repositório IF4Health)</a>
                     </li>
                 </ul>
             </div>
