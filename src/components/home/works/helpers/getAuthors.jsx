@@ -2,8 +2,6 @@ export default function getAuthors(authorsArray){
     let authors = "";
     let cleanedArray = [];
 
-    console.log(authorsArray);
-
     authorsArray.forEach((e) => {
       cleanedArray.push(e.name);
     });

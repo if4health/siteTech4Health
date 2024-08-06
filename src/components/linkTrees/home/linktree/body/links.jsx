@@ -22,7 +22,7 @@ export default function Links(){
     // Main Code //
     useEffect(() => {
         axios   
-            .get(`http://localhost:8080/linkTrees/single/${id}`, {
+            .get(`https://if4health.herokuapp.com/linktrees/single/${id}`, {
                 signal: AbortSignal.timeout(5000) 
             })
         
