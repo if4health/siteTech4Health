@@ -11,7 +11,7 @@ export default function Main(){
     const [ works, setWorks ] = useState([]);
     const [ loading, setLoading ] = useState(true);
     const [ timeOut, setTimeOut ] = useState(false);
-    const backendUrl = "https://if4health.herokuapp.com/";
+    const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
     useEffect(() => {
             axios

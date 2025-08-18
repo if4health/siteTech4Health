@@ -5,7 +5,7 @@ import statusIcon from './helpers/statusIcon';
 import membersString from './helpers/membersString';
 import scholarsString from './helpers/scholarsString';
 
-const bucketUrl = "https://if4health-files.s3.sa-east-1.amazonaws.com/img/projects/";
+const url = `${process.env.REACT_APP_BACKEND_URL}images/projects/`;
 
 export default function renderProjects(data){
     let key = 0;
@@ -41,7 +41,7 @@ export default function renderProjects(data){
             <div className="card" key={key}>
                 <div className="card-header">{e.tittle}</div>
                 <div style={containerStyle}>
-                    <img src={bucketUrl + e.mypic} loading="lazy" style={imageStyle} className="card-img-top" alt="Projeto 2021"/>
+                    <img src={url + e.mypic} loading="lazy" style={imageStyle} className="card-img-top" alt="Projeto 2021"/>
                 </div>
                 <div className="card-body">
                     <p className="card-text">

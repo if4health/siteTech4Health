@@ -7,12 +7,12 @@ import renderLinks from './renderLinks';
 import loadingMessage from '../../../messages/loadingMessage';
 import timeOutMessage from '../../../messages/timeOutMessage';
 
-export default function Links(){
+export default function Links() {
     // React UseStates //
-    const [ links, setLinks ] = useState([]);
-    const [ tittle, setTittle ] = useState(["Carregando..."]);
-    const [ timeOut, setTimeOut ] = useState(false);
-    const [ loading, setLoading ] = useState(true); 
+    const [links, setLinks] = useState([]);
+    const [tittle, setTittle] = useState(["Carregando..."]);
+    const [timeOut, setTimeOut] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     // General Vars //
     const queryString = window.location.search;
@@ -21,17 +21,17 @@ export default function Links(){
 
     // Main Code //
     useEffect(() => {
-        axios   
-            .get(`https://if4health.herokuapp.com/linktrees/single/${id}`, {
-                signal: AbortSignal.timeout(5000) 
+        axios
+            .get(`${process.env.REACT_APP_BACKEND_URL}linktrees/single/${id}`, {
+                signal: AbortSignal.timeout(5000)
             })
-        
-                .then((res) => {
-                    setTittle(res.data.tittle);
-                    setLinks(renderLinks(res.data.links));
-                    setLoading(false);
-                })
-            
+
+            .then((res) => {
+                setTittle(res.data.tittle);
+                setLinks(renderLinks(res.data.links));
+                setLoading(false);
+            })
+
             .catch((err) => {
                 if (axios.isCancel(err)) {
                     setLoading(false);
@@ -43,16 +43,16 @@ export default function Links(){
     loadingMessage(loading);
     timeOutMessage(timeOut);
 
-    return(
+    return (
         <section className="mt-3">
-            <h2 style={{minWidth: "7.445vw"}}>{tittle}</h2>
+            <h2 style={{ minWidth: "7.445vw" }}>{tittle}</h2>
             <div data-ride="carousel">
-                { 
+                {
                     links.map((i) => {
-                        return(i);
+                        return (i);
                     })
                 }
             </div>
-       </section>
+        </section>
     );
 }

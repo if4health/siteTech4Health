@@ -3,7 +3,7 @@ import insertLattes from "./helpers/insertLattes";
 import insertLinkedin from "./helpers/insertLinkedin";
 import insertGithub from "./helpers/insertGithub";
 
-const bucketUrl = "https://if4health-files.s3.sa-east-1.amazonaws.com/img/students/";
+const url = `${process.env.REACT_APP_BACKEND_URL}images/students/`;
 
 export default function renderStudents(data) {
     let list = [];
@@ -13,7 +13,7 @@ export default function renderStudents(data) {
             <div key={e._id}>
                 <div className="card card-body mb-3" style={{ userSelect: 'text' }}>
                     <h5 className="card-title">
-                        <img className="rounded-circle float-left mr-3" src={bucketUrl + e.mypic} alt={`foto de ${e.name}`} style={{ width: "60px", height: "60px" }} />
+                        <img className="rounded-circle float-left mr-3" src={url + e.mypic} alt={`foto de ${e.name}`} style={{ width: "60px", height: "60px" }} />
                         {e.name}
                     </h5>
                     <h6 className="card-subtitle mb-2 text-muted font-weight-light"> {e.quote}</h6>
