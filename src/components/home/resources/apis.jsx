@@ -17,7 +17,7 @@ export default function Apis(){
                     <a href="https://if4health.charqueadas.ifsul.edu.br/ifcloud/home" target="_blank">IF-Cloud</a>
                     </li>
                     <li className="list-group-item text-muted">
-                    <a href="https://if4health.charqueadas.ifsul.edu.br/ifcloud/home" target="_blank">SMART on FHIR users</a>
+                    <a href="https://if4health.charqueadas.ifsul.edu.br/ifcloud/dashboard" target="_blank">SMART on FHIR users</a>
                     </li>
                     <li className="list-group-item text-muted">
                     <a href="https://if4health.charqueadas.ifsul.edu.br/healthgate/login" target="_blank">Health Gate</a>
