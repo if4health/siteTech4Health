@@ -11,11 +11,20 @@ export default function Apis(){
                 </div>
                 <ul className="list-group list-group-flush">
                     <li className="list-group-item">
-                    <a href="https://biosignalinfhir.if4health.com.br/api-docs/">Biossignal in FHIR</a>
+                    <a href="https://if4health.charqueadas.ifsul.edu.br/biofass/api-docs/">Biossignal in FHIR</a>
                     </li>
                     <li className="list-group-item text-muted">
-                    <a href="https://ifcloud.if4health.com.br/ifcloud/home" target="_blank">IFCloud</a>
+                    <a href="https://if4health.charqueadas.ifsul.edu.br/ifcloud/home" target="_blank">IF-Cloud</a>
                     </li>
+                    <li className="list-group-item text-muted">
+                    <a href="https://if4health.charqueadas.ifsul.edu.br/ifcloud/home" target="_blank">SMART on FHIR users</a>
+                    </li>
+                    <li className="list-group-item text-muted">
+                    <a href="https://if4health.charqueadas.ifsul.edu.br/healthgate/login" target="_blank">Health Gate</a>
+                    </li>                    
+                    <li className="list-group-item text-muted">
+                    <a href="https://if4health.charqueadas.ifsul.edu.br/tech4healthapi" target="_blank">Site Admin</a>
+                    </li>                    
                 </ul>
             </div>
         </div>

@@ -11,10 +11,10 @@ export default function Repos(){
                 </div>
                 <ul className="list-group list-group-flush">
                     <li className="list-group-item">
-                    <a href="https://github.com/fabioitturriet/Discovery-kit-with-STM32F769NI-MCU-FIRMWARE-SDCARD_ADC_UART" target="_blank">Código fonte do Firmware placa ST</a>
+                    <a href="https://github.com/fabioitturriet/Discovery-kit-with-STM32F769NI-MCU-FIRMWARE-SDCARD_ADC_UART" target="_blank">Código-fonte do Firmware placa ST</a>
                     </li>
                     <li className="list-group-item text-muted">
-                    <a href="https://github.com/if4health" target="_blank">Código fonte do grupo IF4Health (Repositório IF4Health)</a>
+                    <a href="https://github.com/if4health" target="_blank">Repositório IF4Health</a>
                     </li>
                 </ul>
             </div>

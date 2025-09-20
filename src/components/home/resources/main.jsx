@@ -14,7 +14,7 @@ export default function name(){
                 <Apis/>
                 <Repos/>
                 <Events/>
-                <Hardware/>
+                {/*<Hardware/>*/}
             </div>   
         </section>
     );

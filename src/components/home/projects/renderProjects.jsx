@@ -63,11 +63,11 @@ export default function renderProjects(data){
                         <li> <i aria-hidden="true" className="fa fa-check text-original-blue"></i> Temos varias sugestões de trabalhos; </li>
                         </ul>
                     </div><br/><br/>
-                    <p className="card-text text-center">
+{/*                    <p className="card-text text-center">
                         <a className="btn btn-success mx-3" href="./ECA" role="button">Alunos ECA</a>
                         <a className="btn btn-success mx-3" href="./TSI" role="button">Alunos TSI</a>
                     </p>
-                </div>
+*/}                </div>
             </div>
         );  
     });
