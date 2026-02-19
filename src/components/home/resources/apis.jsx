@@ -23,6 +23,12 @@ export default function Apis(){
                     <a href="https://if4health.charqueadas.ifsul.edu.br/healthgate/login" target="_blank">Health Gate</a>
                     </li>                    
                     <li className="list-group-item text-muted">
+                    <a href="https://if4health.charqueadas.ifsul.edu.br/ficha-um" target="_blank">Ficha Um</a>
+                    </li>                    
+                    <li className="list-group-item text-muted">
+                    <a href="https://if4health.charqueadas.ifsul.edu.br/biomonitor" target="_blank">Biomonitor</a>
+                    </li>                    
+                    <li className="list-group-item text-muted">
                     <a href="https://if4health.charqueadas.ifsul.edu.br/tech4healthapi" target="_blank">Site Admin</a>
                     </li>                    
                 </ul>
@@ -30,3 +36,4 @@ export default function Apis(){
         </div>
     );
 }
+        
